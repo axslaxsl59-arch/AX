@@ -11,6 +11,6 @@
   "background_color": "#10090c",
   "theme_color": "#10090c",
   "icons": [
-    {"src": "/batman-face.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+    {"src": "/night-knight.png", "sizes": "128x128", "type": "image/png", "purpose": "any maskable"}
   ]
 }

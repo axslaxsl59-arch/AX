@@ -73,7 +73,8 @@ class Handler(BaseHTTPRequestHandler):
         assets = {
             '/manifest.webmanifest': ('manifest.webmanifest', 'application/manifest+json; charset=utf-8'),
             '/service-worker.js': ('service-worker.js', 'application/javascript; charset=utf-8'),
-            '/batman-face.svg': ('batman-face.svg', 'image/svg+xml; charset=utf-8')
+            '/batman-face.svg': ('batman-face.svg', 'image/svg+xml; charset=utf-8'),
+            '/night-knight.png': ('night-knight.png', 'image/png')
         }
         if self.path in assets:
             filename, content_type = assets[self.path]
