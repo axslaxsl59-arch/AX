@@ -62,6 +62,7 @@ document.querySelector('#results').addEventListener('click',event=>{const button
 document.querySelector('#favoriteList').addEventListener('click',async event=>{const button=event.target.closest('button');if(!button)return;const index=Number(button.dataset.index);if(!Number.isInteger(index)||!favorites[index])return;if(button.classList.contains('favorite-remove')){const removed=favorites[index];favorites.splice(index,1);saveFavorites();document.querySelectorAll('.user').forEach(row=>{if(row.querySelector('.username-text')?.textContent===removed.name){const toggle=row.querySelector('.favorite-toggle');if(toggle){toggle.textContent='☆ حفظ';toggle.setAttribute('aria-pressed','false')}}})}else if(button.classList.contains('favorite-copy')){try{await navigator.clipboard.writeText(favorites[index].name);document.querySelector('#favoriteCopyStatus').textContent='تم نسخ اليوزر.'}catch{document.querySelector('#favoriteCopyStatus').textContent='تعذر النسخ تلقائيًا.'}}});
 document.querySelector('#copyFavorites').addEventListener('click',copyFavoriteNames);
 renderFavorites();
+document.querySelector('#start').addEventListener('click',()=>document.body.classList.add('entered'));
 document.querySelector('#generate').addEventListener('click',render);document.querySelector('#more').addEventListener('click',render);document.querySelector('#mode').addEventListener('change',render);platform.addEventListener('change',updatePlatform);updatePlatform();
 </script></body></html>
 
