@@ -1,0 +1,16 @@
+{
+  "id": "/",
+  "name": "صائد اليوزرات",
+  "short_name": "صائد اليوزرات",
+  "description": "مولد وفاحص أسماء المستخدمين",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#10090c",
+  "theme_color": "#10090c",
+  "icons": [
+    {"src": "/batman-face.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

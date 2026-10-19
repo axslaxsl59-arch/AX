@@ -70,6 +70,25 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(data)
 
     def do_GET(self):
+        assets = {
+            '/manifest.webmanifest': ('manifest.webmanifest', 'application/manifest+json; charset=utf-8'),
+            '/service-worker.js': ('service-worker.js', 'application/javascript; charset=utf-8'),
+            '/batman-face.svg': ('batman-face.svg', 'image/svg+xml; charset=utf-8')
+        }
+        if self.path in assets:
+            filename, content_type = assets[self.path]
+            try:
+                data = (Path(__file__).resolve().parent / filename).read_bytes()
+            except OSError:
+                self.send_error(404)
+                return
+            self.send_response(200)
+            self.send_header('Content-Type', content_type)
+            self.send_header('Cache-Control', 'no-cache' if filename == 'service-worker.js' else 'public, max-age=3600')
+            self.send_header('Content-Length', str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+            return
         if self.path not in ('/', '/index.html'):
             self.send_error(404)
             return
