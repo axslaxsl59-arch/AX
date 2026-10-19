@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: discord-username-checker
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python discord_username_server.py
+    healthCheckPath: /
