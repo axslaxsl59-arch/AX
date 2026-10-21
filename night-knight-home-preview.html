@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f1f1f3">
+<title>Night Knight | تصميم الرئيسية</title>
+<style>
+html,body{margin:0;min-height:100%;background:#0b0b0e;color:#f5f4f6;font-family:"Segoe UI",Tahoma,Arial,sans-serif}
+body{padding:18px;box-sizing:border-box}
+#night-knight-showcase{width:100%;max-width:1200px;margin:0 auto;color-scheme:light}
+</style>
+<style>
+    #night-knight-showcase {
+      --nn-bg: light-dark(#f1f1f3, #111114);
+      --nn-surface: light-dark(#ffffff, #19191e);
+      --nn-surface-2: light-dark(#f5f5f7, #222228);
+      --nn-border: light-dark(#dedee3, #303038);
+      --nn-text: light-dark(#202026, #f5f4f6);
+      --nn-muted: light-dark(#6c6b75, #aaa7b1);
+      --nn-red: #e23d4b;
+      --nn-soft-red: light-dark(#fff0f1, #351c21);
+      color: var(--nn-text);
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      direction: rtl;
+    }
+    #night-knight-showcase .nn-window {
+      width: 100%;
+      min-height: 650px;
+      overflow: hidden;
+      background: var(--nn-bg);
+      border: 1px solid var(--nn-border);
+      border-radius: 18px;
+      box-shadow: 0 22px 55px #0002;
+      color: var(--nn-text);
+    }
+    #night-knight-showcase .nn-titlebar {
+      height: 55px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--nn-surface);
+      border-bottom: 1px solid var(--nn-border);
+    }
+    #night-knight-showcase .nn-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    #night-knight-showcase .nn-emblem {
+      width: 30px; height: 30px; display: grid; place-items: center;
+      border-radius: 9px; background: var(--nn-red); color: white; font-size: 16px;
+    }
+    #night-knight-showcase .nn-window-controls { display: flex; gap: 7px; direction: ltr; }
+    #night-knight-showcase .nn-window-controls i { width: 9px; height: 9px; border-radius: 50%; background: var(--nn-border); }
+    #night-knight-showcase .nn-frame { display: grid; grid-template-columns: minmax(0, 1fr) 205px; min-height: 595px; }
+    #night-knight-showcase .nn-main { padding: 27px 30px 32px; min-width: 0; }
+    #night-knight-showcase .nn-sidebar {
+      padding: 22px 13px;
+      background: var(--nn-surface);
+      border-left: 1px solid var(--nn-border);
+    }
+    #night-knight-showcase .nn-side-label { color: var(--nn-muted); font-size: 12px; margin: 3px 11px 16px; }
+    #night-knight-showcase .nn-nav { display: flex; flex-direction: column; gap: 6px; }
+    #night-knight-showcase .nn-nav div { padding: 11px 13px; border-radius: 9px; color: var(--nn-muted); font-size: 14px; }
+    #night-knight-showcase .nn-nav .active { color: var(--nn-text); background: var(--nn-soft-red); font-weight: 600; }
+    #night-knight-showcase .nn-status { margin: 25px 10px 0; padding-top: 14px; border-top: 1px solid var(--nn-border); color: var(--nn-muted); font-size: 12px; }
+    #night-knight-showcase h1 { margin: 0; font-size: 26px; line-height: 1.3; }
+    #night-knight-showcase h2 { margin: 0; font-size: 15px; font-weight: 600; }
+    #night-knight-showcase p { margin: 7px 0 0; color: var(--nn-muted); font-size: 13px; line-height: 1.6; }
+    #night-knight-showcase .nn-hero {
+      min-height: 195px;
+      margin-top: 22px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-radius: 16px;
+      background: radial-gradient(circle at 20% 10%, #e23d4b2b, transparent 38%), var(--nn-surface);
+      border: 1px solid var(--nn-border);
+    }
+    #night-knight-showcase .nn-hero-copy { max-width: 440px; }
+    #night-knight-showcase .nn-hero h2 { font-size: 22px; }
+    #night-knight-showcase .nn-button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 16px; margin-top: 19px; border: 0; border-radius: 9px;
+      background: var(--nn-red); color: white; font: inherit; font-size: 13px; font-weight: 700;
+      white-space: nowrap;
+    }
+    #night-knight-showcase .nn-hero-mark {
+      width: 100px; height: 100px; flex: 0 0 100px; display: grid; place-items: center;
+      border-radius: 28px; background: var(--nn-soft-red); color: var(--nn-red); font-size: 38px;
+    }
+    #night-knight-showcase .nn-section-head { display: flex; justify-content: space-between; align-items: center; margin: 25px 2px 12px; }
+    #night-knight-showcase .nn-link { color: var(--nn-red); font-size: 12px; }
+    #night-knight-showcase .nn-tools-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; }
+    #night-knight-showcase .nn-tool {
+      min-height: 112px; padding: 15px; border-radius: 12px;
+      background: var(--nn-surface); border: 1px solid var(--nn-border);
+    }
+    #night-knight-showcase .nn-tool-icon { color: var(--nn-red); font-size: 18px; margin-bottom: 10px; }
+    #night-knight-showcase .nn-tool strong { display: block; font-size: 13px; }
+    #night-knight-showcase .nn-tool span { display: block; margin-top: 5px; color: var(--nn-muted); font-size: 11px; }
+    #night-knight-showcase .nn-bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-top: 12px; }
+    #night-knight-showcase .nn-info {
+      display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      min-height: 66px; padding: 12px 15px; border-radius: 12px;
+      background: var(--nn-surface); border: 1px solid var(--nn-border);
+    }
+    #night-knight-showcase .nn-info-label { color: var(--nn-muted); font-size: 11px; }
+    #night-knight-showcase .nn-info-value { margin-top: 4px; font-size: 17px; font-weight: 700; direction: ltr; text-align: right; }
+    #night-knight-showcase .nn-mini-action { color: var(--nn-red); font-size: 12px; white-space: nowrap; }
+
+    #night-knight-showcase .nn-game-stage {
+      position: relative; min-height: 595px; overflow: hidden;
+      background: linear-gradient(160deg, #1b1b20 0%, #27232a 48%, #151519 100%);
+    }
+    #night-knight-showcase .nn-game-glow { position: absolute; width: 340px; height: 230px; top: 18%; left: 18%; background: #e23d4b20; filter: blur(60px); }
+    #night-knight-showcase .nn-game-title { position: absolute; top: 26px; right: 30px; color: #e8e5ea; font-size: 14px; }
+    #night-knight-showcase .nn-game-sub { display: block; margin-top: 6px; color: #aaa5b1; font-size: 12px; }
+    #night-knight-showcase .nn-block-scene { position: absolute; inset: 120px 12% 0; opacity: .74; }
+    #night-knight-showcase .nn-block {
+      position: absolute; width: 92px; height: 92px; transform: rotate(45deg) skew(-9deg,-9deg);
+      border-radius: 8px; background: linear-gradient(135deg,#49434c,#26242a); border: 1px solid #77707b;
+      box-shadow: 22px 20px 0 #19181d, 22px 21px 0 1px #5a535e;
+    }
+    #night-knight-showcase .nn-block.a { left: 16%; top: 38%; }
+    #night-knight-showcase .nn-block.b { left: 42%; top: 21%; width: 72px; height: 72px; background: linear-gradient(135deg,#63323b,#322127); }
+    #night-knight-showcase .nn-block.c { right: 13%; top: 47%; width: 58px; height: 58px; }
+    #night-knight-showcase .nn-overlay-card {
+      position: absolute; top: 21px; left: 23px; width: min(294px, calc(100% - 46px));
+      padding: 14px; border-radius: 15px; background: #19191eeF; color: #f7f6f8;
+      border: 1px solid #e23d4b88; box-shadow: 0 18px 50px #0007; backdrop-filter: blur(10px);
+    }
+    #night-knight-showcase .nn-overlay-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid #ffffff18; }
+    #night-knight-showcase .nn-overlay-brand { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; }
+    #night-knight-showcase .nn-overlay-brand b { width: 27px; height: 27px; border-radius: 8px; display: grid; place-items: center; background: var(--nn-red); color: #fff; }
+    #night-knight-showcase .nn-chip { color: #ff9ca3; font-size: 10px; }
+    #night-knight-showcase .nn-overlay-timer { margin: 13px 0 11px; padding: 12px; border-radius: 10px; background: #ffffff08; }
+    #night-knight-showcase .nn-overlay-timer small { color: #aaa5b1; font-size: 10px; }
+    #night-knight-showcase .nn-overlay-timer strong { display: block; margin-top: 4px; font-size: 25px; direction: ltr; text-align: right; }
+    #night-knight-showcase .nn-overlay-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    #night-knight-showcase .nn-overlay-actions span { padding: 10px 8px; text-align: center; border-radius: 8px; background: #ffffff0b; color: #efedf1; font-size: 11px; }
+    #night-knight-showcase .nn-overlay-note { margin-top: 10px; padding: 10px; border-radius: 9px; background: #ffffff08; color: #c8c4cd; font-size: 11px; line-height: 1.6; }
+    #night-knight-showcase .nn-overlay-note b { color: #fff; }
+    #night-knight-showcase .nn-stage-hint { position: absolute; right: 30px; bottom: 24px; color: #c1bdc7; font-size: 11px; }
+
+    #night-knight-showcase .nn-tools-page { display: grid; grid-template-columns: minmax(0, 1fr) 235px; min-height: 595px; }
+    #night-knight-showcase .nn-tools-content { padding: 30px; }
+    #night-knight-showcase .nn-tools-aside { padding: 23px 17px; border-left: 1px solid var(--nn-border); background: var(--nn-surface); }
+    #night-knight-showcase .nn-tabs { display: flex; gap: 8px; padding-bottom: 16px; border-bottom: 1px solid var(--nn-border); margin-top: 22px; }
+    #night-knight-showcase .nn-tab { padding: 9px 13px; border-radius: 8px; color: var(--nn-muted); font-size: 12px; }
+    #night-knight-showcase .nn-tab.selected { background: var(--nn-soft-red); color: var(--nn-red); font-weight: 700; }
+    #night-knight-showcase .nn-tool-layout { display: grid; grid-template-columns: minmax(0,1fr) 190px; gap: 14px; margin-top: 18px; }
+    #night-knight-showcase .nn-notes-area { min-height: 315px; padding: 17px; border-radius: 13px; background: var(--nn-surface); border: 1px solid var(--nn-border); }
+    #night-knight-showcase .nn-note-line { margin-top: 15px; color: var(--nn-muted); font-size: 12px; line-height: 1.8; }
+    #night-knight-showcase .nn-side-tool { padding: 15px; margin-top: 12px; border-radius: 12px; background: var(--nn-surface-2); }
+    #night-knight-showcase .nn-side-tool strong { display: block; font-size: 12px; }
+    #night-knight-showcase .nn-side-tool p { font-size: 11px; }
+    #night-knight-showcase .nn-big-time { margin: 13px 0; color: var(--nn-red); font-size: 24px; font-weight: 700; direction: ltr; text-align: right; }
+    #night-knight-showcase .nn-shortcut { display: flex; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--nn-border); color: var(--nn-muted); font-size: 11px; }
+    #night-knight-showcase .nn-key { padding: 3px 7px; border-radius: 5px; background: var(--nn-surface); border: 1px solid var(--nn-border); color: var(--nn-text); direction: ltr; }
+    @media (max-width: 760px) {
+      #night-knight-showcase .nn-window { min-height: 700px; }
+      #night-knight-showcase .nn-frame, #night-knight-showcase .nn-tools-page { grid-template-columns: 1fr; }
+      #night-knight-showcase .nn-sidebar, #night-knight-showcase .nn-tools-aside { border-left: 0; border-top: 1px solid var(--nn-border); }
+      #night-knight-showcase .nn-nav { flex-direction: row; flex-wrap: wrap; }
+      #night-knight-showcase .nn-status { display: none; }
+      #night-knight-showcase .nn-main, #night-knight-showcase .nn-tools-content { padding: 20px; }
+      #night-knight-showcase .nn-tools-grid { grid-template-columns: 1fr; }
+      #night-knight-showcase .nn-tool-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px) {
+      #night-knight-showcase .nn-hero { align-items: flex-start; }
+      #night-knight-showcase .nn-hero-mark { width: 62px; height: 62px; flex-basis: 62px; border-radius: 18px; font-size: 27px; }
+      #night-knight-showcase .nn-hero h2 { font-size: 18px; }
+      #night-knight-showcase .nn-bottom-row { grid-template-columns: 1fr; }
+      #night-knight-showcase .nn-window { border-radius: 12px; }
+    }
+  </style>
+<style id="compact-home-preview">
+@media(max-width:760px){#night-knight-showcase .nn-window{min-height:0}#night-knight-showcase .nn-frame{grid-template-columns:minmax(0,1fr) 170px;min-height:0}#night-knight-showcase .nn-sidebar{padding:16px 9px;border-left:1px solid var(--nn-border);border-top:0}#night-knight-showcase .nn-nav{flex-direction:column;gap:5px}#night-knight-showcase .nn-nav div{padding:8px 7px;font-size:12px}#night-knight-showcase .nn-status{display:block;font-size:10px}#night-knight-showcase .nn-main{padding:18px 14px 18px}#night-knight-showcase .nn-tools-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}#night-knight-showcase .nn-tool{padding:9px;min-height:104px}#night-knight-showcase .nn-tool strong{font-size:11px}#night-knight-showcase .nn-tool span{font-size:10px}#night-knight-showcase .nn-bottom-row{grid-template-columns:1fr;gap:7px;margin-top:8px}#night-knight-showcase .nn-info{min-height:54px;padding:8px 11px}}
+@media(max-width:520px){body{padding:10px}#night-knight-showcase .nn-frame{grid-template-columns:minmax(0,1fr) 96px}#night-knight-showcase .nn-sidebar{padding:12px 4px}#night-knight-showcase .nn-side-label{margin:0 2px 7px;font-size:10px}#night-knight-showcase .nn-nav{gap:4px}#night-knight-showcase .nn-nav div{padding:7px 2px;font-size:9px;text-align:center;line-height:1.35}#night-knight-showcase .nn-status{display:none}#night-knight-showcase .nn-main{padding:14px 9px 14px}#night-knight-showcase h1{font-size:20px}#night-knight-showcase .nn-main>p{font-size:11px}#night-knight-showcase .nn-hero{min-height:154px;padding:11px;gap:6px}#night-knight-showcase .nn-hero h2{font-size:15px}#night-knight-showcase .nn-hero p{font-size:10px}#night-knight-showcase .nn-hero-mark{width:42px;height:42px;flex-basis:42px;border-radius:13px;font-size:20px}#night-knight-showcase .nn-button{padding:8px 9px;font-size:10px;white-space:normal}#night-knight-showcase .nn-section-head{margin-top:17px;margin-bottom:8px}#night-knight-showcase .nn-tools-grid{grid-template-columns:1fr;gap:5px}#night-knight-showcase .nn-tool{display:grid;grid-template-columns:22px minmax(0,1fr);gap:1px 4px;align-items:center;min-height:0;padding:7px}#night-knight-showcase .nn-tool-icon{grid-row:span 2;margin:0}#night-knight-showcase .nn-tool strong{font-size:10px}#night-knight-showcase .nn-tool span{grid-column:2;margin-top:0;font-size:9px}#night-knight-showcase .nn-window{border-radius:10px}}
+</style>
+</head>
+<body>
+<div id="night-knight-showcase"><div class="viz-carousel"><section data-variant="الرئيسية" aria-label="تصميم الرئيسية">
+      <div class="nn-window">
+        <header class="nn-titlebar">
+          <div class="nn-brand"><span class="nn-emblem">✦</span><span>Night Knight</span></div>
+          <div class="nn-window-controls" aria-hidden="true"><i></i><i></i><i></i></div>
+        </header>
+        <div class="nn-frame">
+          <main class="nn-main">
+            <h1>مساحة اللعب</h1>
+            <p>أدواتك السريعة قبل ما تبدأ.</p>
+            <section class="nn-hero" aria-label="تشغيل Roblox">
+              <div class="nn-hero-copy">
+                <h2>جاهز لجولتك؟</h2>
+                <p>افتح Roblox وخل أدوات المساعدة قريبة منك.</p>
+                <span class="nn-button">◈ &nbsp; افتح Roblox</span>
+              </div>
+              <div class="nn-hero-mark" aria-hidden="true">◈</div>
+            </section>
+            <div class="nn-section-head"><h2>أدوات اللعب</h2><span class="nn-link">عرض الكل</span></div>
+            <div class="nn-tools-grid">
+              <div class="nn-tool"><div class="nn-tool-icon">◷</div><strong>مؤقّت الجلسة</strong><span>تابع وقت لعبك</span></div>
+              <div class="nn-tool"><div class="nn-tool-icon">▤</div><strong>ملاحظاتي</strong><span>أفكار محفوظة على جهازك</span></div>
+              <div class="nn-tool"><div class="nn-tool-icon">⌨</div><strong>اختصارات التحكم</strong><span>تذكير بالأزرار</span></div>
+            </div>
+            <div class="nn-bottom-row">
+              <div class="nn-info"><div><div class="nn-info-label">وقت الجلسة</div><div class="nn-info-value">00:24:18</div></div><span class="nn-mini-action">إيقاف مؤقت</span></div>
+              <div class="nn-info"><div><div class="nn-info-label">مفضّلتي</div><div class="nn-info-value" style="font-size:14px;direction:rtl;text-align:right">Brookhaven</div></div><span class="nn-mini-action">فتح القائمة</span></div>
+            </div>
+          </main>
+          <aside class="nn-sidebar">
+            <div class="nn-side-label">القائمة</div>
+            <nav class="nn-nav" aria-label="التنقل"><div class="active">⌂ &nbsp; الرئيسية</div><div>◷ &nbsp; أدوات اللعب</div><div>☆ &nbsp; المفضّلة</div><div>⚙ &nbsp; الإعدادات</div></nav>
+            <div class="nn-status">● &nbsp; جاهز للعب</div>
+          </aside>
+        </div>
+      </div>
+    </section></div></div>
+</body>
+</html>
