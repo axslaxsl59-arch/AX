@@ -1,5 +1,5 @@
-const CACHE_NAME = 'night-knight-shell-v3';
-const SHELL = ['/', '/manifest.webmanifest', '/batman-face.svg', '/night-knight-home-preview.html'];
+const CACHE_NAME = 'night-knight-shell-v4';
+const SHELL = ['/', '/roblox.html', '/manifest.webmanifest', '/roblox-manifest.webmanifest', '/batman-face.svg', '/night-knight-home-preview.html'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(SHELL)));
@@ -20,9 +20,9 @@ self.addEventListener('fetch', event => {
   if (request.mode === 'navigate') {
     event.respondWith(fetch(request).then(response => {
       const copy = response.clone();
-      caches.open(CACHE_NAME).then(cache => cache.put('/', copy));
+      caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
       return response;
-    }).catch(() => caches.match('/')));
+    }).catch(async () => (await caches.match(request)) || caches.match('/')));
   } else {
     event.respondWith(caches.match(request).then(cached => cached || fetch(request)));
   }

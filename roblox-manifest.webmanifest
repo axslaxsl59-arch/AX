@@ -1,0 +1,21 @@
+{
+  "id": "/roblox.html",
+  "name": "Night Knight Roblox",
+  "short_name": "Night Knight",
+  "description": "تشغيل Roblox وحفظ ألعابك وأدوات اللعب المحلية",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/roblox.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#10090c",
+  "theme_color": "#10090c",
+  "icons": [
+    {
+      "src": "/night-knight.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
