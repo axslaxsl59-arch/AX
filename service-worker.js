@@ -1,4 +1,4 @@
-const CACHE_NAME = 'night-knight-shell-v2';
+const CACHE_NAME = 'night-knight-shell-v3';
 const SHELL = ['/', '/manifest.webmanifest', '/batman-face.svg', '/night-knight-home-preview.html'];
 
 self.addEventListener('install', event => {
