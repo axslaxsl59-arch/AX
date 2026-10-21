@@ -6,7 +6,7 @@
   "lang": "ar",
   "dir": "rtl",
   "start_url": "/roblox.html",
-  "scope": "/",
+  "scope": "/roblox.html",
   "display": "standalone",
   "background_color": "#10090c",
   "theme_color": "#10090c",

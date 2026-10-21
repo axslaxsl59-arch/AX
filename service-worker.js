@@ -1,4 +1,4 @@
-const CACHE_NAME = 'night-knight-shell-v4';
+const CACHE_NAME = 'night-knight-shell-v5';
 const SHELL = ['/', '/roblox.html', '/manifest.webmanifest', '/roblox-manifest.webmanifest', '/batman-face.svg', '/night-knight-home-preview.html'];
 
 self.addEventListener('install', event => {
