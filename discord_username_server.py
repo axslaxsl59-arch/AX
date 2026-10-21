@@ -76,6 +76,7 @@ class Handler(BaseHTTPRequestHandler):
             '/service-worker.js': ('service-worker.js', 'application/javascript; charset=utf-8'),
             '/batman-face.svg': ('batman-face.svg', 'image/svg+xml; charset=utf-8'),
             '/night-knight.png': ('night-knight.png', 'image/png'),
+            '/night-knight.ico': ('night-knight.ico', 'image/x-icon'),
             '/night-knight-home-preview.html': ('night-knight-home-preview.html', 'text/html; charset=utf-8'),
             '/roblox.html': ('roblox.html', 'text/html; charset=utf-8')
         }
